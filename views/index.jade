@@ -1,0 +1,33 @@
+extends layout
+
+block body
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container-fluid
+        a.brand(href='#') BingPins
+        ul.nav
+          li
+            a(href='view1') reddit
+          li
+            a(href='view2') nytimes
+  .container-fluid      
+    div(ng-controller='AppCtrl')
+      //.hero-unit
+        h1 Hello there, you could use this app to visualize where things are happening
+      div(ng-view)
+
+    hr
+    div
+      | BingPins version: v
+      span(app-version)
+
+  script(src='js/lib/angular/angular.js')
+  script(src='js/app.js')
+  script(src='js/services.js')
+  script(src='js/controllers.js')
+  script(src='js/filters.js')
+  script(src='js/directives.js')
+  script(src='js/lib/jquery/jquery-1.9.1.min.js')
+  script(src='bootstrap/js/bootstrap.min.js')
+  //script(src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0")
+
